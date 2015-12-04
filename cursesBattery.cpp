@@ -55,7 +55,6 @@ void handleAruments(int argc, char * argv[])
             if (i + 2 <= argc)
             {
                 std::string numberArgument = argv[i + 1];
-                std::cout << "GOT HERE" << std::endl;
                 if (std::regex_match(numberArgument, number))
                 {
                     numberBars = std::stoi(numberArgument);

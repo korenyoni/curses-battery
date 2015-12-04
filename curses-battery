@@ -1,0 +1,10 @@
+#!/bin/bash
+
+binary_filename="./cursesBattery"
+cols=$(tput cols)
+if [ ! -f $binary_filename ]; then
+    echo "Project needs to be compiled prior to use."
+    echo "Execute make and rerun $0"
+else
+    exec ./cursesBattery -b $((cols - 4))
+fi

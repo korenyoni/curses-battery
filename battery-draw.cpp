@@ -2,6 +2,7 @@
 #include <iostream>
 #include <regex>
 #include <unistd.h>
+#include <locale.h>
 
 static const std::string error = "ERROR";
 static const std::string battery_command = "acpi";

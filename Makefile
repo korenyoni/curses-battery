@@ -1,2 +1,2 @@
 make:
-	g++ cursesBattery.cpp -o cursesBattery -lncursesw -std=gnu++11
+	g++ battery-draw.cpp -o battery-draw -lncursesw -std=gnu++11 -g

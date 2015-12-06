@@ -1,10 +1,12 @@
 #!/bin/bash
 
-binary_filename="./cursesBattery"
+binary_filename="./battery-draw"
 cols=$(tput cols)
 if [ ! -f $binary_filename ]; then
     echo "Project needs to be compiled prior to use."
     echo "Execute make and rerun $0"
+elif [ -z $(acpi | sed -n -E 's/(^|.*[^0-9])([0-9]{1,3})%.*/\2/p') ]; then
+    echo "Your system either does not have a battery or does not support acpi."
 else
-    exec ./cursesBattery -b $((cols - 4))
+    $binary_filename $((cols - 5))
 fi

@@ -4,6 +4,7 @@ An ncurses utility to view your battery.
 
 ##Requirements:
 
+* ncurses
 * acpi
 * tput
 
